@@ -57,17 +57,17 @@ def checkout(browser):
     # Fills in personal info
     Select(browser.find_element_by_id('order_billing_state')).select_by_visible_text('WA')
     browser.execute_script("document.getElementById('order_billing_name').value = 'Ermano Winata'")
-    browser.execute_script("document.getElementById('order_email').value = 'gabrielgilbiyanto@gmail.com'")
-    browser.execute_script("document.getElementById('order_tel').value = '206-849-9598'")
-    browser.execute_script("document.getElementById('bo').value = '15524 Corliss Ave N'")
-    #browser.execute_script("document.getElementById('oba3').value = '325'")
-    browser.execute_script("document.getElementById('order_billing_zip').value = '98133'")
-    browser.execute_script("document.getElementById('order_billing_city').value = 'Shoreline'")
+    browser.execute_script("document.getElementById('order_email').value = 'email@gmail.com'")
+    browser.execute_script("document.getElementById('order_tel').value = '206-000-0000'")
+    browser.execute_script("document.getElementById('bo').value = 'My Adrress'")
+    #browser.execute_script("document.getElementById('oba3').value = '333'")
+    browser.execute_script("document.getElementById('order_billing_zip').value = '98245'")
+    browser.execute_script("document.getElementById('order_billing_city').value = 'Seattle'")
 
     # Fills in card info
     browser.execute_script("document.getElementById('nnaerb').value = '11111111111'")
-    browser.find_element_by_xpath('//*[@id="orcer"]').send_keys('648')
-    browser.execute_script("document.getElementById('credit_card_month').value = '01'")
+    browser.find_element_by_xpath('//*[@id="orcer"]').send_keys('224')
+    browser.execute_script("document.getElementById('credit_card_month').value = '05'")
     browser.execute_script("document.getElementById('credit_card_year').value = '2021'")
 
     # Checks checkbox and checks out
