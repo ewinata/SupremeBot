@@ -1,0 +1,37 @@
+{
+    "name": "SupremeBot",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Cop Supreme clothing during release",
+    "icons": { "16": "Supreme.png",
+        "48": "Supreme.png",
+       "128": "Supreme.png" },
+     "content_scripts": [
+         {
+            "matches": [
+                "http://www.supremenewyork.com/shop/all/*"
+            ],
+            "js": ["cop.js"]
+         },
+         {
+            "matches": [
+                "http://www.supremenewyork.com/shop/*"
+            ],
+            "js": ["addToCart.js", "checkoutnow.js"]
+         },
+         {
+             "matches": [
+                 "https://www.supremenewyork.com/checkout"
+             ],
+             "js": ["autofill.js"]
+         }
+     ],
+     "browser_action": {
+         "default_title": "Cop",
+         "default_icon": "Supreme.png",
+         "default_popup": "userInput.html"
+     },
+     "permissions": [
+         "storage", "tabs"
+     ]
+}
